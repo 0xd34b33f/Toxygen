@@ -108,14 +108,14 @@ function updateBasket() {
 			// ИМЯ INPUT
 			setAttributes(name, {"class": "td-name"})
 			setAttributes(inputId, {"hidden": true, "value": cart[i].id})
-			setAttributes(inputName, {"readonly": null, "class": "b-input input-name", "name": "animal-name", "type":"text", "value":cart[i].name});
+			setAttributes(inputName, {"readonly": null, "class": "b-input input-name", "name": `animal-name${i}`, "type":"text", "value":cart[i].name});
 			name.appendChild(inputName);
 			name.appendChild(inputId);
 			// СТОИМОСТЬ INPUT
-			setAttributes(inputCost, {"readonly": null, "class": "b-input input-cost", "name": "animal-cost", "type":"text", "value":cart[i].cost});
+			setAttributes(inputCost, {"readonly": null, "class": "b-input input-cost", "name": `animal-cost${i}`, "type":"text", "value":cart[i].cost});
 			cost.appendChild(inputCost);
 			// КОЛИЧЕСТВО INPUT
-			setAttributes(inputCount, {"data-id": cart[i].id, "readonly": null, "class": "b-input input-count", "name": "animal-count", "type":"text", "value":cart[i].count});
+			setAttributes(inputCount, {"data-id": cart[i].id, "readonly": null, "class": "b-input input-count", "name": `animal-count${i}`, "type":"text", "value":cart[i].count});
 			// КНОПКА БОЛЬШЕ
 			setAttributes(buttonUp, {"data-id": cart[i].id, "class": "btn btn-default", "onClick": "increment(this)"})
 			buttonUp.innerText = "+";
@@ -128,7 +128,7 @@ function updateBasket() {
 			count.appendChild(inputCount);
 			count.appendChild(buttonUp);
 			// ИТОГО INPUT
-			setAttributes(inputTotal, {"readonly": null, "class": "b-input input-total", "name": "animal-total", "type":"text", "value":cart[i].total});
+			setAttributes(inputTotal, {"readonly": null, "class": "b-input input-total", "name": `animal-total${i}`, "type":"text", "value":cart[i].total});
 			// ПРИСОЕДИНЯЕМ ТОТАЛ
 			total.appendChild(inputTotal);
 			getSum();
