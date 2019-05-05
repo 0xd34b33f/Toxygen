@@ -36,7 +36,7 @@
                         print
                             '<ul id="dropdown-list" class="hide">
                         <li><a href="profile.php">My Profile</a></li>
-                        <li><a href="admin.php">Admin Panel</a></li>
+                        <li><a href="admin-users.php">Admin Panel</a></li>
                         <li><a href="../server.php">Log Out</a></li>
                     </ul>';
                     else
@@ -56,7 +56,7 @@
                 <h2 class="auth-header">Админ Панель</h2>
                 <div class="admin-links">
                     <a class="admin-links__link" href="admin-users.php">Пользователи</a>
-                    <a class="admin-links__link" href="admin-goods.php">Товары</a>
+                    <a class="admin-links__link" href="admin-products.php">Товары</a>
                     <a class="admin-links__link" href="admin-categories.php">Категории</a>
                 </div>
                 <form action="admin-users.php" method="post">

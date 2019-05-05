@@ -40,7 +40,7 @@
                         print
                             '<ul id="dropdown-list" class="hide">
 				  <li><a href="profile.php">My Profile</a></li>
-				  <li><a href="admin.php">Admin Panel</a></li>
+				  <li><a href="admin-users.php">Admin Panel</a></li>
 				  <li><a href="../server/logout.php">Log Out</a></li>
 			  </ul>';
 				else
