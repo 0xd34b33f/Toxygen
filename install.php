@@ -1,25 +1,20 @@
 <?php
-include_once("../server/auth_sql.php");
-include_once("../server/sql_misc.php");
-/*
+include_once("server/auth_sql.php");
+include_once("server/sql_misc.php");
+
+
 $val = array("username" => "admin", "password" => hash("whirlpool", "admin"), "isAdmin" => 1, "phone"=> 89999999999, "email" => "what@are.you", "address" => "looking_at?", "birthday" => "01.01.0001");
 print generic_insert("users", $val)."\n";
-
 $val = array("username" => "John", "password" => hash("whirlpool", "John"), "isAdmin" => 0, "phone"=> 89991234561, "email" => "a@a.ru", "address" => "addr", "birthday" => "10.11.2010");
 print generic_insert("users", $val)."\n";
-
 $val = array("username" => "Bill", "password" => hash("whirlpool", "Bill"), "isAdmin" => 0, "phone"=> 89991234562, "email" => "b@b.ru", "address" => "addr", "birthday" => "11.11.2010");
 print generic_insert("users", $val)."\n";
-
 $val = array("username" => "Stan", "password" => hash("whirlpool", "Stan"), "isAdmin" => 0, "phone"=> 89991234563, "email" => "c@c.ru", "address" => "addr", "birthday" => "13.11.2010");
 print generic_insert("users", $val)."\n";
-
 $val = array("username" => "Ron", "password" => hash("whirlpool", "Ron"), "isAdmin" => 0, "phone"=> 89991234564, "email" => "d@d.ru", "address" => "addr", "birthday" => "14.11.2010");
 print generic_insert("users", $val)."\n";
-
 $val = array("username" => "Mark", "password" => hash("whirlpool", "Mark"), "isAdmin" => 0, "phone"=> 89991234565, "email" => "e@e.ru", "address" => "addr", "birthday" => "15.11.2010");
 print generic_insert("users", $val)."\n";
-*/
 
 $val = array("price" => 1234, "description" => "Это же синий попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/c479c3d4a2ef6e6cc366e8514f83c636-full.jpg", "weight" => 228, "product_name" => "BlueMacaw", "color" => "#7202DC", "width" => "700", "height" => "300", "quantity" => "5", "category" => "bird", "category2" => "none");
 print generic_insert("products", $val)."\n";

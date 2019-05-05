@@ -15,8 +15,7 @@ function add_user($username, $password, $isAdmin, $phone, $email, $address, $bir
 		mysqli_real_escape_string($con, $birthday))) {
 		return false; //todo hacked
 	}
-//	print "\nok ok\n";
-	$basic_query = "INSERT INTO users(username, password, isAdmin, phone, email, address, birthday) values ("
+ 	$basic_query = "INSERT INTO users(username, password, isAdmin, phone, email, address, birthday) values ("
 		. wrap_single_quotes_comma($username) . wrap_single_quotes_comma($password) . wrap_single_quotes_comma($isAdmin)
 		. wrap_single_quotes_comma($phone) . wrap_single_quotes_comma($email) . wrap_single_quotes_comma($address) .
 		"'" . $birthday . "');";
