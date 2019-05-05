@@ -21,13 +21,13 @@ $val = array("username" => "Mark", "password" => hash("whirlpool", "Mark"), "isA
 print generic_insert("users", $val)."\n";
 */
 
-$val = array("price" => 1234, "description" => "Это же синий попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/c479c3d4a2ef6e6cc366e8514f83c636-full.jpg", "weight" => 228, "product_name" => "Blue Macaw", "color" => "#7202DC", "width" => "700", "height" => "300", "quantity" => "5", "category" => "bird", "category2" => "none");
+$val = array("price" => 1234, "description" => "Это же синий попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/c479c3d4a2ef6e6cc366e8514f83c636-full.jpg", "weight" => 228, "product_name" => "BlueMacaw", "color" => "#7202DC", "width" => "700", "height" => "300", "quantity" => "5", "category" => "bird", "category2" => "none");
 print generic_insert("products", $val)."\n";
-$val = array("product_name" => "Green Macaw", "price" => 999.9, "description" => "Это же зеленый попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/44433f349e3d675e4bdcc45bc592d3fd-full.jpg", "weight" => 322,  "color" => "#008000", "width" => "650", "height" => "280", "quantity" => "9", "category" => "bird", "category" => "none");
+$val = array("product_name" => "GreenMacaw", "price" => 999.9, "description" => "Это же зеленый попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/44433f349e3d675e4bdcc45bc592d3fd-full.jpg", "weight" => 322,  "color" => "#008000", "width" => "650", "height" => "280", "quantity" => "9", "category" => "bird", "category" => "none");
 print generic_insert("products", $val)."\n";
-$val = array("product_name" => "Red Macaw", "price" => 1199, "description" => "Это же красный попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/5d6ae2d01e508623eda38992d7ae95ee-full.jpg", "weight" => 310,  "color" => "#FF0000", "width" => "680", "height" => "290", "quantity" => "7", "category" => "bird", "category" => "none");
+$val = array("product_name" => "RedMacaw", "price" => 1199, "description" => "Это же красный попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/5d6ae2d01e508623eda38992d7ae95ee-full.jpg", "weight" => 310,  "color" => "#FF0000", "width" => "680", "height" => "290", "quantity" => "7", "category" => "bird", "category" => "none");
 print generic_insert("products", $val)."\n";
-$val = array("product_name" => "Yellow Macaw", "price" => 1099, "description" => "Это же желтый попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/02464814efbc6e12a86e9576cdf7cd9d-full.jpg", "weight" => 260,  "color" => "#FFFF00", "width" => "710", "height" => "400", "quantity" => "10", "category" => "bird", "category" => "none");
+$val = array("product_name" => "YellowMacaw", "price" => 1099, "description" => "Это же желтый попуга", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/02464814efbc6e12a86e9576cdf7cd9d-full.jpg", "weight" => 260,  "color" => "#FFFF00", "width" => "710", "height" => "400", "quantity" => "10", "category" => "bird", "category" => "none");
 print generic_insert("products", $val)."\n";
 $val = array("product_name" => "Penguin", "price" => 2000, "description" => "Все любят пингвинов, особенно Ургант и Светлаков", "picture_link" => "https://cdn1.savepice.ru/uploads/2019/5/5/65e0e6450cf041b7246cd499ee88ef1b-full.jpg", "weight" => 1900,  "color" => "#000000", "width" => "400", "height" => "1000", "quantity" => "2", "category" => "bird", "category" => "fish");
 print generic_insert("products", $val)."\n";

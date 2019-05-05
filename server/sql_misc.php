@@ -55,12 +55,12 @@ function generic_update($table_name, $values)
 			$data_value = $value;
 			$flag = 0;
 		} else
-			$inserted_str = $inserted_str . "$key='$value', ";
+			$updates_str = $updates_str . "$key='$value', ";
 	}
 	if (!check_field($key_value, $table_name, $key_value, strval($data_value)))
 		return (2);
-	$inserted_str = rtrim($inserted_str, ", ");
-	$query = $query . $inserted_str . " WHERE " . $key_value . "=" . $data_value;
+	$updates_str = rtrim($updates_str, ", ");
+	$query = $query . $updates_str . " WHERE " . $key_value . "=" . $data_value;
 	$res = mysqli_query(connect_sql(), $query);
 	return $res;
 }
