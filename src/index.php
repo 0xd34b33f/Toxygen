@@ -212,7 +212,7 @@
 					<input class="form-input form-name" name="name" placeholder="Имя" type="text" value="" required/>
 					<input class="form-input form-email" name="email" placeholder="Почта" type="email" value="" required/>
 				  </div>
-				  <textarea class="form-text" cols="30" name="message" rows="10" value="" placeholder="Введите свое сообщение"></textarea>
+				  <textarea required class="form-text" cols="30" name="message" rows="10" value="" placeholder="Введите свое сообщение"></textarea>
 				  <button class="form-submit">Отправить сообщение</button>
 				</form>
 			  </div>
