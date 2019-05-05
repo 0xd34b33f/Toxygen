@@ -63,7 +63,7 @@
 			<div class="section-main__left">
 			  <h1 class="section-main__header"> Мы продаем милых животных</h1>
 			  <p class="section-main__description">
-				Sit amet, aliquam id diam maecenas ultricies mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi, quis!
+                  Мы своей величайшей командой отлавливаем этих бедных и несчастных животных и продаем их вам. Чтобы вы могли насладиться их красотой в домашних условиях.
 			  </p>
 			  <button class="section-main__button"><a href="animals.php">Купить</a></button>
 			</div>
@@ -132,7 +132,6 @@
 			  <button class="arrow-right" type="button" name="button"><i class="fas fa-chevron-right"></i></button>
 			  <div class="review-box">
 				<div class="review-logo-setion">
-				  <img src="https://lh5.googleusercontent.com/-QTUUAiSPNHA/AAAAAAAAAAI/AAAAAAAAAXk/khjvc_3VjUc/photo.jpg?sz=200">
 				</div>
 				<div class="review-stories">
 				  <ul>
