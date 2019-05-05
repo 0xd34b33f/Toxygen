@@ -79,7 +79,13 @@
 			  </tbody>
 			</table>
 			<h3>ИТОГО: <span id="total">0 $</span></h3>
-			<button type="submit" onclick="clearBasket()" class="checkout-button">Оформить заказ</button>
+
+              <?php
+              if (isset($_SESSION['logged']))
+                  print '<button type="submit" onclick="clearBasket()" class="checkout-button">Оформить заказ</button>';
+              else
+                  print "Вы должны авторизоваться чтобы сделать заказ";
+              ?>
 		  </form>
 		</div>
 		<main class="main">

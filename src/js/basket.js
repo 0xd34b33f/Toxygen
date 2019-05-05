@@ -76,6 +76,7 @@ function decrement(elem) {
 }
 
 function clearBasket() {
+	alert('Спасибо за покупку');
 	window.localStorage.removeItem("cart");
 }
 function getSum() {
