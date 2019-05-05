@@ -97,11 +97,6 @@
 	$arr = generic_read("products", "product_id");
 	foreach ($arr as $data_row)
 	{
-		#print_r($data_row);
-		#print($data_row['picture_link']);
-		#print(strval($data_row['product_name']));
-		#print(strval($data_row['product_id']));
-	
 		print
 			"<div class=\"product\" data-name= ".$data_row["product_name"]." data-id= ".$data_row["product_id"]." data-cost= ".$data_row["price"]." data-amount= ".$data_row["quantity"].">
 			<div class=\"make3D\">
