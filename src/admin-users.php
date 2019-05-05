@@ -60,7 +60,7 @@
                     <a class="admin-links__link" href="admin-products.php">Товары</a>
                     <a class="admin-links__link" href="admin-categories.php">Категории</a>
                 </div>
-                <form action="admin-users.php" method="post">
+                <form action="../server/user_manage.php" method="post">
                     <table class="admin-users">
                         <thead>
                         <tr>
@@ -86,8 +86,6 @@
                             <td><input type="checkbox"></td>
                         </tr>';
 						}
-
-
 						?>
                         </tbody>
                     </table>

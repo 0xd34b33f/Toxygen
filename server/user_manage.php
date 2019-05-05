@@ -15,7 +15,7 @@ function add_user($username, $password, $isAdmin, $phone, $email, $address, $bir
 		mysqli_real_escape_string($con, $birthday))) {
 		return false; //todo hacked
 	}
-	print "\nok ok\n";
+//	print "\nok ok\n";
 	$basic_query = "INSERT INTO users(username, password, isAdmin, phone, email, address, birthday) values ("
 		. wrap_single_quotes_comma($username) . wrap_single_quotes_comma($password) . wrap_single_quotes_comma($isAdmin)
 		. wrap_single_quotes_comma($phone) . wrap_single_quotes_comma($email) . wrap_single_quotes_comma($address) .
@@ -71,9 +71,4 @@ function read_user_props_by_id($user_id)
 	return $res;
 }
 
-//
-//print add_user("user", "pass", "1", " + 1488", "pidor@sa . s", "nope", "228") . "\n";
-//print remove_user("user");
-$array = array("phone" => "144447");
-//print update_user("user", $array);
-//print_r( read_user_props_by_id(5));
+if ("")
