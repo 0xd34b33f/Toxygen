@@ -81,7 +81,6 @@ function generic_read($table_name, $values)
 	$res = mysqli_query(connect_sql(), $query);
 	if (!$res)
 		return false;
-//	var_dump($res);
 	return $res;
 }
 
@@ -96,8 +95,8 @@ function generic_read($table_name, $values)
 
 #$val = array("product_id"=> 1, "description" => "2345678");
 #print "delete = ".generic_delete("products", $val)."\n";
-//$res = (generic_read("users", "user_id"));
-//var_dump($res[0]);
+#$res = (generic_read("products", "product_id = 84 "));
+#print($res);
 //var_dump($res["user_id"]);
 //var_dump(generic_read("users", "user_id"));
 
