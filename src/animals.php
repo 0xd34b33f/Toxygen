@@ -77,28 +77,71 @@
 		</div>
 		<main class="main">
 		  <div class="container">
-			<div class="product" data-name="Пожилой пупуга" data-id="1" data-cost="39" data-amount="5">
-			  <div class="make3D">
-				<div class="product-front">
-				  <div class="shadow"></div>
-				  <img src="./img/birds/blue_macaw/bird_blue_4.jpg" height="265px" alt="" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php 
+	include_once("../server/sql_misc.php");
+	$arr = generic_read("products", "product_id");
+	foreach ($arr as $data_row)
+	{
+		#print_r($data_row);
+		#print($data_row['picture_link']);
+		#print(strval($data_row['product_name']));
+		#print(strval($data_row['product_id']));
+	
+		print
+			"<div class=\"product\" data-name= ".$data_row["product_name"]." data-id= ".$data_row["product_id"]." data-cost= ".$data_row["price"]." data-amount= ".$data_row["quantity"].">
+			<div class=\"make3D\">
+				<div class=\"product-front\">
+				  <div class=\"shadow\"></div>
+				  <img src= ".$data_row["picture_link"].' height="265px" alt="" />
 				  <div class="image_overlay"></div>
 				  <div class="add_to_cart">Add to cart</div>
 				  <div class="stats">
 					<div class="stats-container">
-					  <span class="product_price">$39</span>
-					  <span class="product_name">Пожилой попугай</span>
+					  <span class="product_price"> $'. $data_row["price"].'</span>
+					  <span class="product_name">'.$data_row["product_name"].'</span>
 					  <p>Птица</p>
 					  <div class="product-options">
                           <input class="product-counter" type="number" value="1" min="0">
-						<strong>SIZES</strong>
-						<span>XS, S, M, L, XL, XXL</span>
+						<span>'.$data_row["description"].'</span>
 					  </div>
 					</div>
 				  </div>
 				</div>
 			  </div>
-			</div>
+			</div>'
+		;
+	}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		  </div>
 		</main>
 	  </div>
