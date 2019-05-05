@@ -79,33 +79,19 @@
 			  </tbody>
 			</table>
 			<h3>ИТОГО: <span id="total">0 $</span></h3>
-			<button type="submit" class="checkout-button">Оформить заказ</button>
+			<button type="submit" onclick="clearBasket()" class="checkout-button">Оформить заказ</button>
 		  </form>
 		</div>
 		<main class="main">
-		  <div class="container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php 
-	include_once("../server/sql_misc.php");
-	$arr = generic_read("products", "product_id");
-	foreach ($arr as $data_row)
-	{
-		print
-			"<div class=\"product\" data-name= ".$data_row["product_name"]." data-id= ".$data_row["product_id"]." data-cost= ".$data_row["price"]." data-amount= ".$data_row["quantity"].">
+            <div class="container">
+                <div class="products-wrapper">
+                <?php
+                include_once("../server/sql_misc.php");
+                $arr = generic_read("products", "product_id");
+                foreach ($arr as $data_row)
+                {
+                    print
+                        "<div class=\"product\" data-name= ".$data_row["product_name"]." data-id= ".$data_row["product_id"]." data-cost= ".$data_row["price"]." data-amount= ".$data_row["quantity"].">
 			<div class=\"make3D\">
 				<div class=\"product-front\">
 				  <div class=\"shadow\"></div>
@@ -126,32 +112,18 @@
 				</div>
 			  </div>
 			</div>'
-		;
-	}
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		  </div>
-		</main>
-	  </div>
-	  <footer class="footer">
-		<div class="container">
-		  <div class="footer__copyright">
-			© Copyright @Toxygen 2019, All right reserved
-		  </div>
+                    ;
+                }
+                ?>
+                    </div>
+            </div>
+        </main>
+      </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__copyright">
+                    © Copyright @Toxygen 2019, All right reserved
+                </div>
 		  <div class="footer__socials">
 			<div class="social">
 			  <a target="_blank" href="https://vk.com"><i class="fab fa-vk"></i></a>

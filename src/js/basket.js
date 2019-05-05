@@ -35,7 +35,6 @@ function increment(elem) {
 	let cart = JSON.parse(window.localStorage.getItem("cart"));
 	for (let i = 0; i < cart.length; i++) {
 		if (cart[i].id === id && cart[i].amount > 0) {
-			console.log(cart[i]);
 			let newElem = {
 				id: cart[i].id,
 				name: cart[i].name,
@@ -76,6 +75,9 @@ function decrement(elem) {
 	updateBasket();
 }
 
+function clearBasket() {
+	window.localStorage.removeItem("cart");
+}
 function getSum() {
 	let totalSum = document.getElementById("total");
 	let summ = 0;
@@ -85,9 +87,10 @@ function getSum() {
 			summ += Number(cart[i].total);
 		}
 	}
-	totalSum.innerText = summ;
+	totalSum.innerText = summ.toFixed(2);
 }
 function updateBasket() {
+    console.log(window.localStorage.getItem("cart") !== null);
 	if (window.localStorage.getItem("cart") != null) {
 		let cart = JSON.parse(window.localStorage.getItem("cart"));
 		let bk = document.getElementById("bk-body")
@@ -128,18 +131,16 @@ function updateBasket() {
 			count.appendChild(inputCount);
 			count.appendChild(buttonUp);
 			// ИТОГО INPUT
-			setAttributes(inputTotal, {"readonly": null, "class": "b-input input-total", "name": `animal-total${i}`, "type":"text", "value":cart[i].total});
+			setAttributes(inputTotal, {"readonly": null, "class": "b-input input-total", "name": `animal-total${i}`, "type":"text", "value":cart[i].total.toFixed(2)});
 			// ПРИСОЕДИНЯЕМ ТОТАЛ
 			total.appendChild(inputTotal);
 			getSum();
 		}
-
 	}
 }
 
 function addToLocalStorage(name, id, count, cost) {
 	if (window.localStorage.getItem("cart") === null) {
-		console.log("ADDING")
 		let cart = [];
 		let good = {
 			"id": id,

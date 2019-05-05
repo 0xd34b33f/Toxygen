@@ -1,11 +1,17 @@
+.main {
+  margin-top: 80px;
+}
+
+.products-wrapper {
+	display: flex;
+  flex-wrap: wrap;
+}
 .product{
     position: relative;
-    perspective: 800px;
     width:306px;
     height:471px;
-    transform-style: preserve-3d;
     transition: transform 5s;
-	float:left; 
+	margin-bottom: 50px;
 	margin-right: 23px;
 	-webkit-transition: width 500ms ease-in-out;
 	   -moz-transition: width 500ms ease-in-out;
@@ -260,7 +266,4 @@ div.c-white span{
 	width:14px;
 	height:14px; 
 	border:1px solid #e8e9eb;
-}
-.fucked {
-  background: green;
 }
