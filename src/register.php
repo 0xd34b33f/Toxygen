@@ -20,12 +20,12 @@
 				<li class="primary-menu__item">
 				  <a class="primary-menu__link" href="animals.php">PRODUCTS</a>
 				</li>
-				<li class="primary-menu__item">
-				  <a class="primary-menu__link" href="#">ABOUT US</a>
-				</li>
-				<li class="primary-menu__item">
-				  <a class="primary-menu__link" href="#">CONTACTS</a>
-				</li>
+                  <li class="primary-menu__item">
+                      <a class="primary-menu__link" href="index.php#about">ABOUT US</a>
+                  </li>
+                  <li class="primary-menu__item">
+                      <a class="primary-menu__link" href="index.php#contact">CONTACTS</a>
+                  </li>
 			  </ul>
 			</div>
 		  </nav>
@@ -82,7 +82,6 @@
 		</div>
 	  </footer>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/register.js"></script>
   </body>
 </html>

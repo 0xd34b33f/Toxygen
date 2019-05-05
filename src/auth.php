@@ -25,12 +25,12 @@ if (isset($_SESSION['logged']))
 				<li class="primary-menu__item">
 				  <a class="primary-menu__link" href="animals.php">PRODUCTS</a>
 				</li>
-				<li class="primary-menu__item">
-				  <a class="primary-menu__link" href="#">ABOUT US</a>
-				</li>
-				<li class="primary-menu__item">
-				  <a class="primary-menu__link" href="#">CONTACTS</a>
-				</li>
+                  <li class="primary-menu__item">
+                      <a class="primary-menu__link" href="index.php#about">ABOUT US</a>
+                  </li>
+                  <li class="primary-menu__item">
+                      <a class="primary-menu__link" href="index.php#contact">CONTACTS</a>
+                  </li>
 			  </ul>
 			</div>
 		  </nav>

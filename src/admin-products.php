@@ -1,3 +1,8 @@
+<?php
+session_start();
+if (!$_SESSION['admin'])
+    header('location: animals.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,24 +26,30 @@
                             <a class="primary-menu__link" href="animals.php">PRODUCTS</a>
                         </li>
                         <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">ABOUT US</a>
+                            <a class="primary-menu__link" href="index.php#about">ABOUT US</a>
                         </li>
                         <li class="primary-menu__item">
-                            <a class="primary-menu__link" href="#">CONTACTS</a>
+                            <a class="primary-menu__link" href="index.php#contact">CONTACTS</a>
                         </li>
                     </ul>
                     <ul class="left-menu__list">
                         <li id="dropdown" class="dropdown ddmenu left-menu__item">
                             <i class="fas fa-user"></i>
                             <?php
-                            session_start();
-                            if (isset($_SESSION['logged']))
+                            if (isset($_SESSION['logged']) && $_SESSION['admin'] == true)
                                 print
                                     '<ul id="dropdown-list" class="hide">
                         <li><a href="profile.php">My Profile</a></li>
                         <li><a href="admin-users.php">Admin Panel</a></li>
                         <li><a href="../server/logout.php">Log Out</a></li>
                     </ul>';
+                            else if (isset($_SESSION['logged']) && $_SESSION['admin'] == false) {
+                                print
+                                    '<ul id="dropdown-list" class="hide">
+                        <li><a href="profile.php">My Profile</a></li>
+                        <li><a href="../server/logout.php">Log Out</a></li>
+                    </ul>';
+                            }
                             else
                                 print
                                     '<ul id="dropdown-list" class="hide">
@@ -56,11 +67,28 @@
                 <h2 class="auth-header">Админ Панель</h2>
                 <div class="admin-links">
                     <a class="admin-links__link" href="admin-users.php">Пользователи</a>
-                    <a class="admin-links__link" href="admin-goods.php">Товары</a>
+                    <a class="admin-links__link" href="admin-products.php">Товары</a>
                     <a class="admin-links__link" href="admin-categories.php">Категории</a>
                 </div>
-                <form action="admin-users.php" method="post">
-                    <table class="admin-products">
+                <form class="admin-products-add">
+                    <input class="product-add-input" type="text" value="" placeholder="Название" required>
+                    <input class="product-add-input" type="text" value="" placeholder="Описание" required>
+                    <input class="product-add-input" type="text" value="" placeholder="Картинка" required>
+                    <input class="product-add-input" type="text" value="" placeholder="Размер" required>
+                    <input class="product-add-input" type="text" value="" placeholder="Вес" required>
+                    <input class="product-add-input" type="text" value="" placeholder="Цена" required>
+                    <select name="" id="">
+                        <option value="1">
+                            Животные
+                        </option>
+                        <option value="2">
+                            Птицы
+                        </option>
+                    </select>
+                    <input type="submit" value="Добавить животинку">
+                </form>
+                <form action="admin-products.php" method="post">
+                    <table class="admin-products-table">
                         <thead>
                         <tr>
                             <th>Название</th>
@@ -80,12 +108,14 @@
                             <td><input class="admin-products" type="text" value="25x65x78"></td>
                             <td><input class="admin-products" type="text" value="256кг"></td>
                             <td><input class="admin-products" type="text" value="25x65x78"></td>
-                            <td><input class="admin-products" type="text" value="Млекопитающие"></td>
-                            <td><input type="checkbox"></td>
+                            <td><select name="" id="">
+                                    <option value="Рыбы">Рыбы</option>
+                                    <option value="Птицы">Птицы</option>
+                                </select></td>
                         </tr>
                         </tbody>
                     </table>
-                    <input type="submit" value="Сохранить">
+                    <input class="save" type="submit" value="Сохранить">
                 </form>
             </div>
         </main>

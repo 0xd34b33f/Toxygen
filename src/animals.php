@@ -20,12 +20,12 @@
 				<li class="primary-menu__item">
 				  <a class="primary-menu__link" href="animals.php">PRODUCTS</a>
 				</li>
-				<li class="primary-menu__item">
-				  <a class="primary-menu__link" href="#">ABOUT US</a>
-				</li>
-				<li class="primary-menu__item">
-				  <a class="primary-menu__link" href="#">CONTACTS</a>
-				</li>
+                  <li class="primary-menu__item">
+                      <a class="primary-menu__link" href="index.php#about">ABOUT US</a>
+                  </li>
+                  <li class="primary-menu__item">
+                      <a class="primary-menu__link" href="index.php#contact">CONTACTS</a>
+                  </li>
 			  </ul>
 			  <ul class="left-menu__list">
 				<li onclick="openNav()" class="left-menu__item">
@@ -34,22 +34,29 @@
 				</li>
 				<li id="dropdown" class="dropdown ddmenu left-menu__item">
 				  <i class="fas fa-user"></i>
-					<?php
+                    <?php
                     session_start();
-                    if (isset($_SESSION['logged']))
+                    if (isset($_SESSION['logged']) && $_SESSION['admin'] == true)
                         print
                             '<ul id="dropdown-list" class="hide">
-				  <li><a href="profile.php">My Profile</a></li>
-				  <li><a href="admin-users.php">Admin Panel</a></li>
-				  <li><a href="../server/logout.php">Log Out</a></li>
-			  </ul>';
-				else
-				print
-                    '<ul id="dropdown-list" class="hide">
-				<li><a href="auth.php">Sign In</a></li>
-				<li><a href="register.php">Register</a></li>
-			</ul>';
-				?>
+                        <li><a href="profile.php">My Profile</a></li>
+                        <li><a href="admin-users.php">Admin Panel</a></li>
+                        <li><a href="../server/logout.php">Log Out</a></li>
+                    </ul>';
+                    else if (isset($_SESSION['logged']) && $_SESSION['admin'] == false) {
+                        print
+                            '<ul id="dropdown-list" class="hide">
+                        <li><a href="profile.php">My Profile</a></li>
+                        <li><a href="../server/logout.php">Log Out</a></li>
+                    </ul>';
+                    }
+                    else
+                        print
+                            '<ul id="dropdown-list" class="hide">
+                    <li><a href="auth.php">Sign In</a></li>
+                    <li><a href="register.php">Register</a></li>
+                </ul>';
+                    ?>
 				</li>
 			  </ul>
 			</div>
